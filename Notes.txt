@@ -1,0 +1,85 @@
+***What is Inheritance?***
+
+Definition: Inheritance is when one class (child or subclass) acquires the properties and behaviors (fields and methods) of another class (parent or superclass).
+
+Purpose: To promote code reusability, method overriding (polymorphism), and to represent "is-a" relationships.
+
+Real-world analogy: If "Car" is a class, then "Tesla" is a subclass — it automatically is a car and gets all basic car features, but can add or override its own.
+
+
+***Key Terminology***
+
+Superclass (Parent class): The class whose members are inherited.
+
+Subclass (Child class): The class that inherits.
+
+extends keyword: Used for class inheritance.
+
+super keyword: Used to refer to parent class members or constructor.
+
+this keyword: Refers to the current object, used to resolve naming conflicts or call own constructor.
+
+Overriding vs Overloading: Overriding modifies inherited behavior; overloading defines methods with same name but different parameters.
+
+
+***Types of Inheritance in Java***
+
+Important: Java supports single, multilevel, and hierarchical inheritance using classes, but not multiple inheritance using classes (to avoid ambiguity, also known as "diamond problem"). Interfaces solve this limitation.
+
+
+
+***(a) Single Inheritance
+
+One parent, one child.
+
+class A {}
+class B extends A {}
+
+
+
+***(b) Multilevel Inheritance
+
+A → B → C chain.
+
+class A {}
+class B extends A {}
+class C extends B {}
+
+
+
+***(c) Hierarchical Inheritance
+
+One parent, multiple children.
+
+class A {}
+class B extends A {}
+class C extends A {}
+
+
+
+***(d) Multiple Inheritance (via Interfaces only)
+interface A { void show(); }
+interface B { void display(); }
+
+class C implements A, B {
+    public void show() 
+{ System.out.println("show"); 
+}
+    public void display() 
+{ System.out.println("display");
+ }
+}
+
+
+
+
+
+
+
+***Final Keyword Impact***
+
+final class: cannot be inherited.
+
+final method: cannot be overridden.
+
+final variable: constant, cannot be reassigned.
