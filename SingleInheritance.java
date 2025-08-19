@@ -13,10 +13,10 @@ class Dog extends Animal {
 }
 
 // Main class to run the program
-public class SingleInheritanceDemo {
+public class SingleInheritance {
     public static void main(String[] args) {
-        Dog d = new Dog();  // Create object of Dog
-        d.eat();           // Inherited method from Animal
-        d.bark();          // Own method
+        Dog d = new Dog(); // Create object of Dog
+        d.eat(); // Inherited method from Animal
+        d.bark(); // Own method
     }
 }
